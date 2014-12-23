@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>getUserMedia() shim demo</title>
-	<meta name="author" content="Addy Osmani"/>
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>getUserMedia() shim demo</title>
+    <meta name="author" content="Addy Osmani"/>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 <link rel="stylesheet" href="css/demo.css">
 <div class="container">
-	<header>
-		<div class="page-header">
-		  <h1>getUserMedia.js <small>Cross-browser getUserMedia() shim demo</small></h1>
-		</div>
-	</header>
-	<section>
-	<div class="row">
-	  <div class="span12">
-	    <div class="row">
-	      <div class="span4">
-	      <h2>Input</h2>
-			<div id="webcam">
-			</div>
-	      </div>
-	     
-	      <div class="span4">
-	      <h2>Output</h2>
-	      <canvas id="canvas"  height="240" width="320"></canvas>
-	      </div>
-	    </div>
-	 
-	    <div class="row">
-	    	<p id="errorMessage"></p>
-	    </div>
-	    <div class="row">
-	    	<p>Please make sure you are running this demo on a HTTP server :) If your browser supports getUserMedia()/WebRTC and it has been enabled, the native capabilities of your browser will be used for this page. If not, a Flash fallback will be used which will keep the entire demo entirely functional. If for any reason the face detection doesn't detect your face, please try taking another picture with your face positoned more centrally.</p>
-	    </div>
-	    	<div class="row">
-		    	<div class="span4">&nbsp;</div>
-		    	<div class="span4"><button class="btn btn-primary btn-large" id="takeSnapshot">1. Take a picture</button>
-		    	<div class="span4">&nbsp;</div>
-  		</div>
-	  </div>
-	</div>
-	</section>
+    <header>
+        <div class="page-header">
+        </div>
+    </header>
+    <section>
+    <div class="row">
+      <div class="span12">
+        <div class="row">
+          <div class="span6" style="text-align: center">
+          <h2>Input</h2>
+            <div id="webcam" style="margin: 0 auto">
+            </div>
+          </div>
+         
+          <div class="span6" style="text-align: center">
+          <h2>Output</h2>
+          <canvas id="canvas"  height="240" width="320" style="margin: 0 auto"></canvas>
+          </div>
+        </div>
+     
+        <div class="row">
+            <p id="errorMessage"></p>
+        </div>
+
+        <div style="text-align: center; padding: 20px 0">
+            <button class="btn btn-primary btn-large" id="captureVideo">3. Capture video</button>
+        </div>
+        
+      </div>
+    </div>
+    </section>
+    <footer></footer>
 </div>
 
 <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/getUserMedia.js"></script>
+<script type="text/javascript" src="js/whammy.js"></script>
 <script type="text/javascript" src="js/demo.js"></script>
 
 </body>
